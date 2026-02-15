@@ -1,0 +1,211 @@
+.page {
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+    background: linear-gradient(135deg, rgba(46, 125, 50, 0.03) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.mission {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    margin-bottom: 4rem;
+    border: 1px solid rgba(46, 125, 50, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.mission h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.mission p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+.founder {
+    margin-bottom: 4rem;
+}
+
+.founder>h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-family: var(--font-heading);
+}
+
+.founderContent {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(46, 125, 50, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.founderImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.2);
+}
+
+.founderImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.founderInfo h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.role {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+}
+
+.company {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.age {
+    font-size: 1rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, rgba(46, 125, 50, 0.1) 0%, rgba(46, 125, 50, 0.05) 100%);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.bio {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+.values>h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-family: var(--font-heading);
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.valueCard {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(46, 125, 50, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.valueCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(46, 125, 50, 0.15);
+    border-color: var(--color-primary);
+}
+
+.valueIcon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #1b5e20 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.valueCard h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+    font-family: var(--font-heading);
+}
+
+.valueCard p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+    .page {
+        padding: 6rem 1.5rem 3rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .founderContent {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .founderImage {
+        width: 100%;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .valuesGrid {
+        grid-template-columns: 1fr;
+    }
+}

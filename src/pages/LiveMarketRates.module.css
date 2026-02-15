@@ -1,0 +1,360 @@
+.page {
+    min-height: 100vh;
+    padding: 10rem 2rem 6rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative background elements */
+.page::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.04em;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.filters {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.searchBar {
+    flex: 2;
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary);
+}
+
+.searchInput {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.2rem;
+    border: 2px solid #f1f5f9;
+    border-radius: 16px;
+    font-size: 1rem;
+    background: #f8fafc;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+.filterGroup {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: #f8fafc;
+    padding: 0.5rem 1rem;
+    border-radius: 16px;
+    border: 2px solid #f1f5f9;
+}
+
+.filterGroup svg {
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.select {
+    width: 100%;
+    padding: 0.5rem 0;
+    border: none;
+    background: transparent;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.select:focus {
+    outline: none;
+}
+
+.refreshBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem 1.8rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.refreshBtn:hover:not(:disabled) {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.refreshBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.spinning {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.lastUpdated {
+    text-align: right;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.tableContainer {
+    background: white;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: inherit;
+}
+
+.table thead {
+    background: #f8fafc;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.table th {
+    padding: 1.5rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+}
+
+.table th:nth-child(1) {
+    width: 22%;
+}
+
+.table th:nth-child(2) {
+    width: 20%;
+}
+
+.table th:nth-child(3) {
+    width: 16%;
+}
+
+.table th:nth-child(4) {
+    width: 16%;
+}
+
+.table th:nth-child(5) {
+    width: 16%;
+}
+
+.table th:nth-child(6) {
+    width: 10%;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #f1f5f9;
+    transition: all 0.2s ease;
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.table tbody tr:hover {
+    background: #fdfdfd;
+    transform: scale(1.002);
+}
+
+.table td {
+    padding: 1.5rem;
+    font-size: 1rem;
+    color: var(--color-text-main);
+    vertical-align: middle;
+}
+
+.productName {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--color-text-main);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.category {
+    font-size: 0.7rem;
+    color: var(--color-primary);
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.price {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.avgPrice {
+    font-size: 1.2rem;
+    color: var(--color-primary-dark);
+}
+
+.minIcon {
+    color: #ef4444;
+}
+
+.maxIcon {
+    color: var(--color-primary);
+}
+
+.unitText {
+    color: var(--color-text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.unit {
+    color: var(--color-text-muted);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.loading,
+.noResults {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: white;
+    border-radius: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    color: var(--color-text-muted);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .filters {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .searchBar,
+    .filterGroup,
+    .refreshBtn {
+        width: 100%;
+        flex: none;
+    }
+
+    .tableContainer {
+        border-radius: 20px;
+        overflow-x: auto;
+    }
+
+    .table {
+        min-width: 900px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page {
+        padding: 8rem 1rem 4rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+}

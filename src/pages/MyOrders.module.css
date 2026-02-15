@@ -1,0 +1,265 @@
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.title {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.orderList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.orderCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 24px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: var(--transition-elegant);
+}
+
+.orderCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.orderId {
+    font-family: monospace;
+    background: #f1f5f9;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--color-text-main);
+}
+
+.date {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+}
+
+.statusGroup {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.badge {
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.pending {
+    background: #fffbeb;
+    color: #92400e;
+}
+
+.paid {
+    background: #ecfdf5;
+    color: #065f46;
+}
+
+.approved {
+    background: #ecfdf5;
+    color: #065f46;
+}
+
+.failed {
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.rejected {
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.items {
+    margin-bottom: 1.5rem;
+}
+
+.itemRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-text-main);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.emptyState {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: white;
+    border-radius: 32px;
+    border: 1px solid #f1f5f9;
+}
+
+.emptyState p {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+.shopBtn {
+    background: var(--color-primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition-elegant);
+}
+
+.shopBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.2);
+}
+
+.refreshBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    background: #f1f5f9;
+    color: var(--color-primary);
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-elegant);
+}
+
+.refreshBtn:hover:not(:disabled) {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+}
+
+.refreshBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.errorBox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #fef2f2;
+    color: #991b1b;
+    border-radius: 14px;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    border: 1px solid #fee2e2;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+        margin: 1rem auto;
+    }
+
+    .title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .orderCard {
+        padding: 1.25rem;
+        border-radius: 18px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .statusGroup {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .badge {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .total {
+        font-size: 1.1rem;
+        width: 100%;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px dashed #f1f5f9;
+        margin-bottom: 0.5rem;
+    }
+
+    .emptyState {
+        padding: 4rem 1.5rem;
+        border-radius: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .itemRow {
+        font-size: 0.85rem;
+    }
+
+    .orderId {
+        font-size: 0.8rem;
+    }
+}

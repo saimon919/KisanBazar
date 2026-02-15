@@ -1,0 +1,215 @@
+.container {
+    padding: 2rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--color-text-main);
+    font-family: var(--font-heading);
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+.controls.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 6rem;
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 4rem;
+    }
+
+    .controls {
+        width: 100%;
+    }
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.searchBar {
+    position: relative;
+    flex: 1;
+    max-width: 500px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+}
+
+.searchInput {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--border-radius-pill);
+    font-size: 1rem;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    transition: var(--transition-elegant);
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.1);
+}
+
+.filterGroup {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.sortSelect {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius-pill);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    cursor: pointer;
+    transition: var(--transition-elegant);
+    outline: none;
+}
+
+.sortSelect:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.categories {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.categoryBtn {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius-pill);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    transition: var(--transition-elegant);
+    cursor: pointer;
+}
+
+.categoryBtn:hover {
+    background: #f8fafc;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.categoryBtn.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
+}
+
+.suggestions {
+    margin-bottom: 5rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.03) 0%, rgba(14, 165, 233, 0.03) 100%);
+    padding: 3rem;
+    border-radius: 32px;
+    border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.aiBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.6rem 1.25rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .categories {
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .filterBtn {
+        white-space: nowrap;
+    }
+}
+
+.noResults {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 5rem;
+    background: var(--color-surface);
+    border-radius: 24px;
+    color: var(--color-text-muted);
+}
+
+.noResults p {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .header {
+        margin-bottom: 2rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .searchBar {
+        max-width: 100%;
+    }
+
+    .categories {
+        overflow-x: auto;
+        padding-bottom: 1rem;
+    }
+}

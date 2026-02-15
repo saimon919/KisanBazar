@@ -1,0 +1,167 @@
+.section {
+    padding: 6rem 5%;
+    background: var(--color-bg);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+}
+
+.titleGroup {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.titleIcon {
+    color: var(--color-primary);
+    padding: 1rem;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 16px;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin: 0;
+    font-family: var(--font-heading);
+}
+
+.subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0;
+}
+
+.timestamp {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    background: #f8fafc;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+}
+
+.tableContainer {
+    background: white;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table th {
+    padding: 1.5rem 2rem;
+    background: #f8fafc;
+    color: var(--color-text-muted);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.table td {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+}
+
+.cropCell {
+    font-weight: 700;
+}
+
+.marketCell {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-main);
+}
+
+.priceCell {
+    font-weight: 800;
+}
+
+.currency {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-right: 0.25rem;
+}
+
+.value {
+    font-size: 1.25rem;
+}
+
+.trend {
+    margin-left: 0.75rem;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+}
+
+.up {
+    color: #10b981;
+    background: #ecfdf5;
+}
+
+.down {
+    color: #ef4444;
+    background: #fef2f2;
+}
+
+.stable {
+    color: #64748b;
+    background: #f1f5f9;
+}
+
+.liteNote {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 4rem 5%;
+    }
+
+    .table th,
+    .table td {
+        padding: 1.25rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .value {
+        font-size: 1.1rem;
+    }
+}

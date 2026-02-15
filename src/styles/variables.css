@@ -1,0 +1,82 @@
+:root {
+  /* Artisan Nature-Inspired Elite Palette */
+  /* Titan Emerald - Deeper, more vibrant emerald */
+  --color-primary: #059669;
+  --color-primary-dark: #064e3b;
+  --color-secondary: #0ea5e9;
+  --color-accent: #f59e0b;
+
+  /* Agricultural Trust 1Tx Glass */
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --glass-blur: blur(10px);
+  --glass-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+
+  /* Performance Tokens */
+  --lite-blur: 0px;
+  --lite-opacity: 1;
+
+  /* Luxury Typography */
+  --letter-spacing-hero: -0.06em;
+  --letter-spacing-body: 0.01em;
+  --line-height-luxury: 1.618;
+  /* Golden Ratio */
+  --color-accent-light: #fef3c7;
+
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+
+  /* Dark Mode Palette (Initial Tokens) */
+  --dark-bg: #020617;
+  --dark-surface: #0f172a;
+  --dark-text: #f8fafc;
+
+  /* Modern Glassmorphism 2.0 */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-blur: blur(12px) saturate(160%);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+
+  /* Elite Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Spacing & Transitions */
+  --spacing-unit: 1rem;
+  --transition-elegant: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --border-radius-pill: 9999px;
+  --border-radius-lg: 1.5rem;
+}
+
+/* Global Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-heading);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-elegant);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

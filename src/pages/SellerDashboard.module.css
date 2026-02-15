@@ -1,0 +1,339 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.titleArea h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.04em;
+}
+
+.titleArea p {
+    color: var(--color-text-muted);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.titleRow {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.verifiedBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.statCard {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: var(--glass-shadow);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: var(--transition-elegant);
+}
+
+.statCard:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--color-primary);
+}
+
+.statIcon {
+    background: var(--color-primary);
+    color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.2);
+}
+
+.statInfo h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.statInfo p {
+    margin: 0.5rem 0 0 0;
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--color-text-main);
+    letter-spacing: -0.02em;
+}
+
+.mainContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 1200px) {
+    .mainContent {
+        grid-template-columns: 1.8fr 1fr;
+    }
+}
+
+.cardSection {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.sectionHeader h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--color-text-main);
+}
+
+.addBtn {
+    background: var(--color-primary);
+    color: white;
+    padding: 0.9rem 1.8rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: none;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.addBtn:hover {
+    transform: scale(1.05);
+    background: #059669;
+}
+
+.tableContainer {
+    overflow-x: auto;
+    border-radius: 16px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    padding: 1.25rem;
+    color: var(--color-text-muted);
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #f1f5f9;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.table td {
+    padding: 1.5rem 1.25rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: var(--color-text-main);
+    font-weight: 500;
+}
+
+.thumb {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.badge {
+    background: #f1f5f9;
+    color: var(--color-text-muted);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.actionBtn {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    transition: var(--transition-elegant);
+}
+
+.actionBtn:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.actionBtn.delete:hover {
+    background: #ef4444;
+    border-color: #ef4444;
+}
+
+.analyticsSection {
+    background: var(--color-primary-dark);
+    padding: 2.5rem;
+    border-radius: 24px;
+    color: white;
+    height: fit-content;
+    box-shadow: 0 20px 40px rgba(6, 78, 59, 0.1);
+}
+
+.analyticsSection h2 {
+    font-family: var(--font-heading);
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.chartWrapper {
+    height: 350px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 16px;
+}
+
+.addForm {
+    background: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    border: 1px solid #e2e8f0;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+@media (min-width: 900px) {
+    .formGrid {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+.input {
+    width: 100%;
+    padding: 1.1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--transition-elegant);
+    margin-bottom: 1.25rem;
+}
+
+.input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+    outline: none;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.fileUpload {
+    border: 2px dashed #cbd5e1;
+    padding: 2rem;
+    border-radius: 16px;
+    background: white;
+    text-align: center;
+    transition: var(--transition-elegant);
+    cursor: pointer;
+}
+
+.fileUpload:hover {
+    border-color: var(--color-primary);
+}
+
+.fileLabel {
+    display: block;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.fileInput {
+    display: none;
+}
+
+.imagePreviewContainer {
+    background: white;
+    border-radius: 20px;
+    padding: 1.25rem;
+    border: 1px solid #e2e8f0;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagePreview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.submitBtn {
+    background: var(--color-primary);
+    color: white;
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 14px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    border: none;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
+}
