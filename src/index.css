@@ -50,10 +50,6 @@ body {
   }
 }
 
-/* Enable default cursor for specific fallback or dev scenarios if needed */
-.show-cursor * {
-  cursor: auto !important;
-}
 
 .app-container {
   display: flex;
